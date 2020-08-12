@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Agneses darbs</h1>
+    </div>*@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="page.css" media="screen" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    @*<link rel=icon href="Cloud.png" type="image/png">*@
+    <link rel="icon" href="Cloud.png">
+
+    <title>GetaPro Internship</title>
+</head>
+<body>
+    <div id="loader" style="height:100vh;width:100vw">
+        <img id="image-loader" src="ajax-loader.gif" />
+    </div>
+    <div class="table-container" id="main">
+        <div class="table-responsive-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="center-table-headers" scope="col">Timer</th>
+                        <th class="center-table-headers" scope="col">Circle color change</th>
+                        <th class="center-table-headers" scope="col">Get request</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="counter" id="counter"></p>
+                        </td>
+                        <td>
+                            <div class="circle-position">
+                                <svg height='100' width='100' class="circle-border">
+                                    <circle id="changeCircleColor" fill="none" fill-opacity="40%" cx='50' cy='50' r='51' />
+                                </svg>
+                                <button id="randomColorButton" class="btn btn-outline-secondary" type="button" onclick="generateRandomColor()">Click me</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="responseCodeStyle" class="response-code">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button id="getResponse" class="btn btn-outline-secondary" type="button">Click me</button>
+                                    </div>
+                                    <input id="response_code" type="text" class="form-control" value="" placeholder="Code">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
+<footer class="footer" id="main_footer">
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <i class="fa fa-address-book"></i>
+                <h5 class="contact_details"><b>Contact Details :</b></h5>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p class="contact_details">agnese.jargane@gmail.com</p>
+                </div>
+                <div>
+                    <i class=" fa fa-tty"></i>
+                    <p class="contact_details">+371 26489807</p>
+                </div>
+            </div>
+            <div class="col">
+                <i class="fa fa-clock-o"></i>
+                <p style="display: inline-block"><b>Date:</b></p>
+                <p id="date" style="display:inline-block"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript"
+        src="page.js">
+</script>
